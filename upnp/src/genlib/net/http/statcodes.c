@@ -46,57 +46,57 @@
 
 #define NUM_1XX_CODES   2
 static const char *Http1xxCodes[NUM_1XX_CODES];
-static const char *Http1xxStr = "Continue\0" "Switching Protocols\0";
+static const char *Http1xxStr = {"Continue\0" "Switching Protocols\0"};
 
 #define NUM_2XX_CODES   7
 static const char *Http2xxCodes[NUM_2XX_CODES];
-static const char *Http2xxStr =
-    "OK\0"
-    "Created\0"
-    "Accepted\0"
-    "Non-Authoratative Information\0"
-    "No Content\0" "Reset Content\0" "Partial Content\0";
+static const char *Http2xxStr = {
+    "OK\0",
+    "Created\0",
+    "Accepted\0",
+    "Non-Authoratative Information\0",
+    "No Content\0" "Reset Content\0", "Partial Content\0"};
 
 #define NUM_3XX_CODES   8
 static const char *Http3xxCodes[NUM_3XX_CODES];
-static const char *Http3xxStr =
-    "Multiple Choices\0"
-    "Moved Permanently\0"
-    "Found\0"
-    "See Other\0"
-    "Not Modified\0" "Use Proxy\0" "\0" "Temporary Redirect\0";
+static const char *Http3xxStr = {
+    "Multiple Choices\0",
+    "Moved Permanently\0",
+    "Found\0",
+    "See Other\0",
+    "Not Modified\0", "Use Proxy\0", "\0" "Temporary Redirect\0"};
 
 #define NUM_4XX_CODES   18
 static const char *Http4xxCodes[NUM_4XX_CODES];
-static const char *Http4xxStr =
-    "Bad Request\0"
-    "Unauthorized\0"
-    "Payment Required\0"
-    "Forbidden\0"
-    "Not Found\0"
-    "Method Not Allowed\0"
-    "Not Acceptable\0"
-    "Proxy Authentication Required\0"
-    "Request Timeout\0"
-    "Conflict\0"
-    "Gone\0"
-    "Length Required\0"
-    "Precondition Failed\0"
-    "Request Entity Too Large\0"
-    "Request-URI Too Long\0"
-    "Unsupported Media Type\0"
-    "Requested Range Not Satisfiable\0" "Expectation Failed\0";
+static const char *Http4xxStr = {
+    "Bad Request\0",
+    "Unauthorized\0",
+    "Payment Required\0",
+    "Forbidden\0",
+    "Not Found\0",
+    "Method Not Allowed\0",
+    "Not Acceptable\0",
+    "Proxy Authentication Required\0",
+    "Request Timeout\0",
+    "Conflict\0",
+    "Gone\0",
+    "Length Required\0",
+    "Precondition Failed\0",
+    "Request Entity Too Large\0",
+    "Request-URI Too Long\0",
+    "Unsupported Media Type\0",
+    "Requested Range Not Satisfiable\0", "Expectation Failed\0"};
 
 #define NUM_5XX_CODES   6
 static const char *Http5xxCodes[NUM_5XX_CODES];
-static const char *Http5xxStr =
-    "Internal Server Error\0"
-    "Not Implemented\0"
-    "Bad Gateway\0"
-    "Service Unavailable\0"
-    "Gateway Timeout\0" "HTTP Version Not Supported\0";
+static const char *Http5xxStr = { 
+    "Internal Server Error\0",
+    "Not Implemented\0",
+    "Bad Gateway\0",
+    "Service Unavailable\0",
+    "Gateway Timeout\0" "HTTP Version Not Supported\0"};
 
-static xboolean gInitialized = FALSE;
+static int  gInitialized = 0;
 
 /************************************************************************
 ************************* Functions *************************************
@@ -118,10 +118,10 @@ static xboolean gInitialized = FALSE;
 * Returns:																
 *	 void																
 ************************************************************************/
-static UPNP_INLINE void
-init_table( IN const char *encoded_str,
-            OUT const char *table[],
-            IN int tbl_size )
+static void
+init_table( const char *encoded_str,
+            const char *table[],
+            int tbl_size )
 {
     int i;
     const char *s = encoded_str;
@@ -144,7 +144,7 @@ init_table( IN const char *encoded_str,
 * Returns:																
 *	 void																
 ************************************************************************/
-static UPNP_INLINE void
+static  void
 init_tables( void )
 {
     init_table( Http1xxStr, Http1xxCodes, NUM_1XX_CODES );
@@ -153,7 +153,7 @@ init_tables( void )
     init_table( Http4xxStr, Http4xxCodes, NUM_4XX_CODES );
     init_table( Http5xxStr, Http5xxCodes, NUM_5XX_CODES );
 
-    gInitialized = TRUE;        // mark only after complete
+    gInitialized = 1;        // mark only after complete
 }
 
 /************************************************************************
