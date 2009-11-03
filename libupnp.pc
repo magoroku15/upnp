@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libupnp
+Description: Linux SDK for UPnP Devices
+Version: 1.6.5
+Libs:  -L${libdir} -lupnp -lthreadutil -lixml 
+Cflags: -D_THREAD_SAFE -pthread -I${includedir}/upnp
+

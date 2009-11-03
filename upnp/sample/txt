@@ -1,0 +1,381 @@
+Initializing UPnP with ipaddress=(null) port=0
+UPnP Initialized (192.168.11.25:-16383)
+Registering Control Point
+Control Point Registered
+
+
+
+======================================================================
+
+----------------------------------------------------------------------
+
+UPNP_DISCOVERY_ADVERTISEMENT_ALIVE
+
+ErrCode     =  0
+
+Expires     =  100
+
+DeviceId    =  uuid:Upnp-TVEmulator-1_0-1234567890001
+
+DeviceType  =  
+
+ServiceType =  urn:schemas-upnp-org:service:tvpicture:1
+
+ServiceVer  =  
+
+Location    =  http://192.168.11.13:49152/tvdevicedesc.xml
+
+OS          =  Linux/2.6.31-14-generic, UPnP/1.0, Portable SDK for UPnP devices/1.6.6
+
+Ext         =  
+
+----------------------------------------------------------------------
+
+======================================================================
+
+
+
+
+Found Tv device
+Found service: urn:schemas-upnp-org:service:tvcontrol:1
+
+serviceId: urn:upnp-org:serviceId:tvcontrol1
+
+Subscribing to EventURL http://192.168.11.13:49152/upnp/event/tvcontrol1...
+Subscribed to EventURL with SID=uuid:7c45ecea-1dd2-11b2-a735-bbf99358563f
+Found service: urn:schemas-upnp-org:service:tvpicture:1
+
+serviceId: urn:upnp-org:serviceId:tvpicture1
+
+Subscribing to EventURL http://192.168.11.13:49152/upnp/event/tvpicture1...
+Subscribed to EventURL with SID=uuid:7c47731c-1dd2-11b2-a735-bbf99358563f
+TvCtrlPointPrintList:
+   1 -- uuid:Upnp-TVEmulator-1_0-1234567890001
+
+
+
+
+======================================================================
+
+----------------------------------------------------------------------
+
+UPNP_EVENT_RECEIVED
+
+SID         =  uuid:7c45ecea-1dd2-11b2-a735-bbf99358563f
+
+EventKey    =  0
+
+ChangedVars =  <e:propertyset xmlns:e="urn:schemas-upnp-org:event-1-0">
+<e:property>
+<Power>1</Power>
+</e:property>
+<e:property>
+<Channel>1</Channel>
+</e:property>
+<e:property>
+<Volume>5</Vol
+----------------------------------------------------------------------
+
+======================================================================
+
+
+
+
+Received Tv Control Event: 0 for SID uuid:7c45ecea-1dd2-11b2-a735-bbf99358563f
+Tv State Update (service 0): 
+ Variable Name: Power New Value:'1'
+ Variable Name: Channel New Value:'1'
+ Variable Name: Volume New Value:'5'
+
+>> 
+
+
+
+======================================================================
+
+----------------------------------------------------------------------
+
+UPNP_EVENT_RECEIVED
+
+SID         =  uuid:7c47731c-1dd2-11b2-a735-bbf99358563f
+
+EventKey    =  0
+
+ChangedVars =  <e:propertyset xmlns:e="urn:schemas-upnp-org:event-1-0">
+<e:property>
+<Color>5</Color>
+</e:property>
+<e:property>
+<Tint>5</Tint>
+</e:property>
+<e:property>
+<Contrast>5</Contras
+----------------------------------------------------------------------
+
+======================================================================
+
+
+
+
+Received Tv Picture Event: 0 for SID uuid:7c47731c-1dd2-11b2-a735-bbf99358563f
+Tv State Update (service 1): 
+ Variable Name: Color New Value:'5'
+ Variable Name: Tint New Value:'5'
+ Variable Name: Contrast New Value:'5'
+ Variable Name: Brightness New Value:'5'
+
+
+
+======================================================================
+
+----------------------------------------------------------------------
+
+UPNP_DISCOVERY_SEARCH_RESULT
+
+ErrCode     =  0
+
+Expires     =  100
+
+DeviceId    =  uuid:Upnp-TVEmulator-1_0-1234567890001
+
+DeviceType  =  urn:schemas-upnp-org:device:tvdevice:1
+
+ServiceType =  
+
+ServiceVer  =  
+
+Location    =  http://192.168.11.13:49152/tvdevicedesc.xml
+
+OS          =  Linux/2.6.31-14-generic, UPnP/1.0, Portable SDK for UPnP devices/1.6.6
+
+Ext         =  
+
+----------------------------------------------------------------------
+
+======================================================================
+
+
+
+
+Found Tv device
+TvCtrlPointPrintList:
+   1 -- uuid:Upnp-TVEmulator-1_0-1234567890001
+
+
+
+
+======================================================================
+
+----------------------------------------------------------------------
+
+UPNP_DISCOVERY_SEARCH_RESULT
+
+ErrCode     =  0
+
+Expires     =  100
+
+DeviceId    =  uuid:Upnp-TVEmulator-1_0-1234567890001
+
+DeviceType  =  urn:schemas-upnp-org:device:tvdevice:1
+
+ServiceType =  
+
+ServiceVer  =  
+
+Location    =  http://192.168.11.13:49152/tvdevicedesc.xml
+
+OS          =  Linux/2.6.31-14-generic, UPnP/1.0, Portable SDK for UPnP devices/1.6.6
+
+Ext         =  
+
+----------------------------------------------------------------------
+
+======================================================================
+
+
+
+
+Found Tv device
+TvCtrlPointPrintList:
+   1 -- uuid:Upnp-TVEmulator-1_0-1234567890001
+
+
+
+
+======================================================================
+
+----------------------------------------------------------------------
+
+UPNP_DISCOVERY_SEARCH_TIMEOUT
+
+----------------------------------------------------------------------
+
+======================================================================
+
+
+
+
+
+
+
+======================================================================
+
+----------------------------------------------------------------------
+
+UPNP_DISCOVERY_ADVERTISEMENT_ALIVE
+
+ErrCode     =  0
+
+Expires     =  100
+
+DeviceId    =  uuid:964550d8-98df-11db-8a60-3728d17b1580
+
+DeviceType  =  
+
+ServiceType =  
+
+ServiceVer  =  
+
+Location    =  http://192.168.11.1:49152/description.xml
+
+OS          =  Linux/2.4.20_mvl31-5VT9000-MPW1, UPnP/1.0, Portable SDK for UPnP devices/1.3.1
+
+Ext         =  
+
+----------------------------------------------------------------------
+
+======================================================================
+
+
+
+
+Error generating presURL from http://192.168.11.1:49152/ + (null)
+TvCtrlPointPrintList:
+   1 -- uuid:Upnp-TVEmulator-1_0-1234567890001
+
+
+
+
+======================================================================
+
+----------------------------------------------------------------------
+
+UPNP_DISCOVERY_ADVERTISEMENT_ALIVE
+
+ErrCode     =  0
+
+Expires     =  100
+
+DeviceId    =  uuid:964550d8-98df-11db-8a60-3728d17b1580
+
+DeviceType  =  
+
+ServiceType =  
+
+ServiceVer  =  
+
+Location    =  http://192.168.11.1:49152/description.xml
+
+OS          =  Linux/2.4.20_mvl31-5VT9000-MPW1, UPnP/1.0, Portable SDK for UPnP devices/1.3.1
+
+Ext         =  
+
+----------------------------------------------------------------------
+
+======================================================================
+
+
+
+
+
+
+
+======================================================================
+
+----------------------------------------------------------------------
+
+UPNP_DISCOVERY_ADVERTISEMENT_ALIVE
+
+ErrCode     =  0
+
+Expires     =  100
+
+DeviceId    =  uuid:964550d8-98df-11db-8a60-3728d17b1580
+
+DeviceType  =  
+
+ServiceType =  
+
+ServiceVer  =  
+
+Location    =  http://192.168.11.1:49152/description.xml
+
+OS          =  Linux/2.4.20_mvl31-5VT9000-MPW1, UPnP/1.0, Portable SDK for UPnP devices/1.3.1
+
+Ext         =  
+
+----------------------------------------------------------------------
+
+======================================================================
+
+
+
+
+Error generating presURL from http://192.168.11.1:49152/ + (null)
+TvCtrlPointPrintList:
+   1 -- uuid:Upnp-TVEmulator-1_0-1234567890001
+
+
+
+
+======================================================================
+
+----------------------------------------------------------------------
+
+UPNP_DISCOVERY_ADVERTISEMENT_ALIVE
+
+ErrCode     =  0
+
+Expires     =  100
+
+DeviceId    =  uuid:964550d8-98df-11db-8a60-3728d17b1580
+
+DeviceType  =  
+
+ServiceType =  
+
+ServiceVer  =  
+
+Location    =  http://192.168.11.1:49152/description.xml
+
+OS          =  Linux/2.4.20_mvl31-5VT9000-MPW1, UPnP/1.0, Portable SDK for UPnP devices/1.3.1
+
+Ext         =  
+
+----------------------------------------------------------------------
+
+======================================================================
+
+
+
+
+Error generating presURL from http://192.168.11.1:49152/ + (null)
+TvCtrlPointPrintList:
+   1 -- uuid:Upnp-TVEmulator-1_0-1234567890001
+
+
+
+
+======================================================================
+
+----------------------------------------------------------------------
+
+UPNP_DISCOVERY_ADVERTISEMENT_ALIVE
+
+ErrCode     =  0
+
+Expires     =  100
+
+DeviceId    =  uuid:964550d8-98df-11db-8a60-3728d17b1580
+
+Devic
