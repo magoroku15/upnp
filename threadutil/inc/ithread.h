@@ -37,6 +37,22 @@ extern "C" {
 
 
 #include <pthread.h>
+
+struct pthread_rwlock;
+struct pthread_rwlockattr;
+
+typedef struct	pthread_rwlockattr	*pthread_rwlockattr_t;
+typedef struct	pthread_rwlock		*pthread_rwlock_t;
+
+/* !!NOTICE!!
+pthread_mutexattr_setkind_np
+pthread_rwlock_destroy
+pthread_rwlock_init
+pthread_rwlock_wrlock
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+*/
+
 #ifndef WIN32
 	#include <unistd.h>
 #endif
@@ -44,6 +60,8 @@ extern "C" {
 #ifdef __FreeBSD__
 	#define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
 #endif
+
+	#define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
 
 #ifdef PTHREAD_MUTEX_RECURSIVE
 	/* This system has SuS2-compliant mutex attributes.
@@ -216,7 +234,8 @@ typedef pthread_rwlock_t ithread_rwlock_t;
  *      Returns EINVAL if the kind is not supported.
  *      See man page for pthread_mutexattr_setkind_np
  *****************************************************************************/
-#ifdef PTHREAD_MUTEX_RECURSIVE
+//#ifdef PTHREAD_MUTEX_RECURSIVE
+#if 1
 	#define ithread_mutexattr_setkind_np pthread_mutexattr_settype
 #else
 	#define ithread_mutexattr_setkind_np pthread_mutexattr_setkind_np

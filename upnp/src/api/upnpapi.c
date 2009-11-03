@@ -85,7 +85,7 @@ virtualDirList *pVirtualDirList;
 CLIENTONLY( ithread_mutex_t GlobalClientSubscribeMutex; )
 
 // rwlock to synchronize handles (root device or control point handle)
-    ithread_rwlock_t GlobalHndRWLock;
+    /*ithread_rwlock_t GlobalHndRWLock;*/
 
 // Mutex to synchronize the uuid creation process
     ithread_mutex_t gUUIDMutex;
@@ -213,9 +213,9 @@ int UpnpInit( IN const char *HostIP,
         /* TODO: Fix Cygwin so we don't need this memset(). */
         memset(&GlobalHndRWLock, 0, sizeof(GlobalHndRWLock));
 #endif
-    if (ithread_rwlock_init(&GlobalHndRWLock, NULL) != 0) {
+    /*if (ithread_rwlock_init(&GlobalHndRWLock, NULL) != 0) {
         return UPNP_E_INIT_FAILED;
-    }
+    }*/
 
     if (ithread_mutex_init(&gUUIDMutex, NULL) != 0) {
         return UPNP_E_INIT_FAILED;
@@ -445,7 +445,7 @@ UpnpFinish()
 #ifdef INCLUDE_CLIENT_APIS
     ithread_mutex_destroy(&GlobalClientSubscribeMutex);
 #endif
-    ithread_rwlock_destroy(&GlobalHndRWLock);
+    /*ithread_rwlock_destroy(&GlobalHndRWLock);*/
     ithread_mutex_destroy(&gUUIDMutex);
 
     // remove all virtual dirs

@@ -14,6 +14,6 @@ LOCAL_C_INCLUDES += $(UPNP_TOP)/upnp/inc/
 LOCAL_C_INCLUDES += $(UPNP_TOP)/upnp/inc/
 LOCAL_C_INCLUDES += $(UPNP_TOP)/upnp/sample/common/
 
-LOCAL_MODULE := upnp_tv_device
+LOCAL_MODULE := upnp_tv_device.bin
 LOCAL_STATIC_LIBRARIES := libupnp
 include $(BUILD_EXECUTABLE)

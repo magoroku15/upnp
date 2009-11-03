@@ -98,24 +98,24 @@ struct Handle_Info
     int   aliasInstalled;       // 0 = not installed; otherwise installed
 };
 
-extern ithread_rwlock_t GlobalHndRWLock;
+/*extern ithread_rwlock_t GlobalHndRWLock;*/
 Upnp_Handle_Type GetHandleInfo(int Hnd, struct Handle_Info **HndInfo); 
 
 #define HandleLock() HandleWriteLock()
 
 #define HandleWriteLock()  \
 	UpnpPrintf(UPNP_INFO, API, __FILE__, __LINE__, "Trying a write lock"); \
-	ithread_rwlock_wrlock(&GlobalHndRWLock); \
+	/*ithread_rwlock_wrlock(&GlobalHndRWLock); */ \
 	UpnpPrintf(UPNP_INFO, API, __FILE__, __LINE__, "Write lock acquired");
 
 #define HandleReadLock()  \
 	UpnpPrintf(UPNP_INFO, API, __FILE__, __LINE__, "Trying a read lock"); \
-	ithread_rwlock_rdlock(&GlobalHndRWLock); \
+	/*ithread_rwlock_rdlock(&GlobalHndRWLock); */ \
 	UpnpPrintf(UPNP_INFO, API, __FILE__, __LINE__, "Read lock acquired");
 
 #define HandleUnlock() \
 	UpnpPrintf(UPNP_INFO, API,__FILE__, __LINE__, "Trying Unlock"); \
-	ithread_rwlock_unlock(&GlobalHndRWLock); \
+	/*ithread_rwlock_unlock(&GlobalHndRWLock); */ \
 	UpnpPrintf(UPNP_INFO, API, __FILE__, __LINE__, "Unlocked rwlock");
 
 Upnp_Handle_Type GetClientHandleInfo(int *client_handle_out, 
