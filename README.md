@@ -5,7 +5,7 @@
 
 ##Test Case 
 According to the build instructions follow the above steps, system will
-generate three samples in the directory ./upnp/sample/.
+generate three samples in the directory ./upnp/sample/. 
 Run the test ./tvcombo ./tvctrlpt ./tvdevice.
 
 ##Modify by Shanjin Yang
