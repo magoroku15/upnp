@@ -1,15 +1,14 @@
-## Build Instructions
-* cd ./threadutil && make --> libthreadutil.la
-* cd ../ixml && make --> libixml.la
-* cd ../upnp && make --> sample/*
+##Build Instructions
+- cd ./threadutil && make ¿> libthreadutil.la
+- cd ../ixml && make ¿> libixml.la
+- cd ../upnp && make ¿> sample/*
 
-## Test Case
+##Test Case 
 According to the build instructions follow the above steps, system will
-generate three samples in the director ./upnp/sample/.
-Run the test ./tvcombo  ./tvctrlpt  ./tvdevice.
-Portable SDK for UPnP* Devices (libupnp)
+generate three samples in the directory ./upnp/sample/.
+Run the test ./tvcombo ./tvctrlpt ./tvdevice.
 
-## Modify by Shanjin Yang.
+##Modify by Shanjin Yang
 See the git log.
 
 Copyright (c) 2000-2003 Intel Corporation - All Rights Reserved.
