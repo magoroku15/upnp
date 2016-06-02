@@ -41,8 +41,8 @@ extern "C" {
 struct pthread_rwlock;
 struct pthread_rwlockattr;
 
-typedef struct	pthread_rwlockattr	*pthread_rwlockattr_t;
-typedef struct	pthread_rwlock		*pthread_rwlock_t;
+//typedef struct	pthread_rwlockattr	*pthread_rwlockattr_t;
+//typedef struct	pthread_rwlock		*pthread_rwlock_t;
 
 /* !!NOTICE!!
 pthread_mutexattr_setkind_np
